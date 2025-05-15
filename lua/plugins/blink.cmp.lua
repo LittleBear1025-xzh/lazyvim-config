@@ -26,8 +26,8 @@ return {
             fuzzy = {
                 sorts = {
                     "score",
-                    "sort_text",
                     "exact",
+                    "sort_text",
                 },
             },
             sources = {
