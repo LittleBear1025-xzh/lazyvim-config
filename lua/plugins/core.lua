@@ -28,12 +28,14 @@ return {
         name = "catppuccin",
         priority = 1000,
         opts = {
-            flavour = "frappe",
+            -- flavour = "frappe",
+            flavour = "latte",
             -- backgroud = {
             --     light = "latte",
             --     dark = "mocha",
             -- },
-            -- transparent_background = true,
+            -- transparent_background = (vim.g.neovide == nil),
+            transparent_background = true,
             styles = {
                 functions = { "italic" },
                 types = { "italic" },
