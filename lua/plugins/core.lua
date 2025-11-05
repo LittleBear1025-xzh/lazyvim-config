@@ -35,7 +35,7 @@ return {
             --     dark = "mocha",
             -- },
             -- transparent_background = (vim.g.neovide == nil),
-            transparent_background = true,
+            transparent_background = false,
             styles = {
                 functions = { "italic" },
                 types = { "italic" },
