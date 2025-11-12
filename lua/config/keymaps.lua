@@ -5,6 +5,7 @@
 local map = vim.keymap.set
 local opt = { noremap = true, silent = true }
 
+map("n", "<C-[>", "<Esc>", opt)
 map("i", "<C-h>", "<BS>", opt)
 map({ "n", "x", "o" }, "H", "^", opt)
 map({ "n", "x", "o" }, "L", "$", opt)
