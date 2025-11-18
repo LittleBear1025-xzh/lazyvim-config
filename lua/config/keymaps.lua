@@ -5,8 +5,8 @@
 local map = vim.keymap.set
 local opt = { noremap = true, silent = true }
 
-map("n", "<C-[>", "<Esc>", opt)
-map("i", "<C-h>", "<BS>", opt)
+-- map({ "n", "x", "o", "c", "t" }, "<C-[>", "J", { noremap = true, silent = true })
+-- map("t", "<C-h>", "<BS>", opt)
 map({ "n", "x", "o" }, "H", "^", opt)
 map({ "n", "x", "o" }, "L", "$", opt)
 map({ "n", "x", "o" }, "J", "5j", opt)

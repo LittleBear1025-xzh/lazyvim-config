@@ -28,18 +28,31 @@ return {
         name = "catppuccin",
         priority = 1000,
         opts = {
-            -- flavour = "frappe",
-            flavour = "latte",
-            -- backgroud = {
-            --     light = "latte",
-            --     dark = "mocha",
-            -- },
-            -- transparent_background = (vim.g.neovide == nil),
-            transparent_background = false,
+            flavour = "frappe",
+            -- flavour = "latte",
+            backgroud = {
+                light = "latte",
+                dark = "frappe",
+            },
+            transparent_background = (vim.g.neovide ~= nil),
+            -- transparent_background = false,
             styles = {
                 functions = { "italic" },
                 types = { "italic" },
             },
         },
+    },
+    {
+        "projekt0n/github-nvim-theme",
+        name = "github-theme",
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function()
+            require("github-theme").setup({
+                -- ...
+            })
+
+            vim.cmd("colorscheme github_dark_dimmed")
+        end,
     },
 }

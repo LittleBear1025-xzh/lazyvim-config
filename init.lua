@@ -3,7 +3,7 @@ require("config.lazy")
 
 -- neovide settings
 if vim.g.neovide then
-    -- vim.g.neovide_opacity = 0.8
+    vim.g.neovide_opacity = 0.95
     -- vim.g.neovide_normal_opacity = 0.8
     vim.o.guifont = "Maple Mono NF CN:h13"
     vim.g.neovide_remember_window_size = true

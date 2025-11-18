@@ -25,8 +25,8 @@ return {
             },
             fuzzy = {
                 sorts = {
-                    "score",
                     "exact",
+                    "score",
                     "sort_text",
                 },
             },
