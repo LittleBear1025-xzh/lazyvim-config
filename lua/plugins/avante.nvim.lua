@@ -2,23 +2,33 @@ return {}
 -- return { "yetone/avante.nvim", version = false }
 -- return {
 --     "yetone/avante.nvim",
---
+--     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
+--     -- ⚠️ must add this setting! ! !
+--     build = vim.fn.has("win32") ~= 0 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+--         or "make",
 --     event = "VeryLazy",
 --     -- lazy = false,
 --     version = false, -- set this if you want to always pull the latest change
+--     ---@module 'avante'
+--     ---@type avante.Config
 --     opts = {
+--         -- add any opts here
+--         -- this file can contain specific instructions for your project
+--         instructions_file = "avante.md",
 --         -- add any opts here
 --         provider = "deepseek",
 --         -- provider = "copilot",
 --         -- auto_suggestions_provider = "openai",
---         file_selector = {
+--         selector = {
 --             provider = "snacks",
 --         },
 --         providers = {
 --             deepseek = {
 --                 __inherited_from = "openai",
+--                 api_key_name = "DEEPSEEK_API_KEY",
 --                 endpoint = "https://api.deepseek.com",
---                 model = "deepseek-coder",
+--                 model = "deepseek-chat",
+--                 -- model = "deepseek-coder",
 --                 -- model = "deepseek-reasoner",
 --                 max_tokens = 8192,
 --                 -- extra_request_body = {
@@ -27,9 +37,6 @@ return {}
 --             },
 --         },
 --     },
---     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
---     build = "make",
---     -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
 --     dependencies = {
 --         "nvim-treesitter/nvim-treesitter",
 --         "stevearc/dressing.nvim",
