@@ -9,3 +9,4 @@ vim.o.expandtab = true -- 按 TAB 键会插入空格而不是 TAB 字符
 vim.o.softtabstop = tab_num_equal_to_space -- 代替 TAB 字符插入的空格数
 vim.o.shiftwidth = tab_num_equal_to_space -- 缩进时插入的空格数
 vim.g.autoformat = false -- 关闭自动格式化功能
+vim.opt.laststatus = 3 -- 全局状态栏
