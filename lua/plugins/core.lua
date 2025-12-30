@@ -64,6 +64,7 @@ return {
             -- directly inside the plugin declaration.
             vim.g.sonokai_style = "atlantis"
             vim.g.sonokai_enable_italic = true
+            vim.g.sonokai_transparent_background = 2
             -- vim.cmd.colorscheme("sonokai")
         end,
     },
