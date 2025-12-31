@@ -21,7 +21,8 @@ return {
         opts = {
             keymap = {
                 preset = "super-tab",
-                ["<C-J>"] = { "show", "show_documentation", "hide_documentation" },
+                ["<C-J>"] = { "show", "show_documentation", "hide_documentation", "fallback" },
+                ["<C-L>"] = { "snippet_forward" },
             },
             fuzzy = {
                 sorts = {
