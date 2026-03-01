@@ -12,8 +12,9 @@ return {
     },
     {
         "saghen/blink.cmp",
-        version = false,
-        build = "cargo build --release",
+        version = "1.*",
+        -- version = false,
+        -- build = "cargo build --release",
         dependencies = {
             { "saghen/blink.compat" },
             { "Kaiser-Yang/blink-cmp-avante" },
