@@ -26,6 +26,10 @@ if vim.g.vscode then
         vscode.call("workbench.view.explorer")
     end, opt)
 
+    map("n", "gh", function()
+        vscode.call("editor.action.showHover")
+    end, opt)
+
     map("n", "]e", function()
         vscode.call("editor.action.marker.nextInFiles")
     end, opt)
@@ -34,7 +38,25 @@ if vim.g.vscode then
     end, opt)
 
     map("n", "<leader>aa", function()
-        vscode.call("antigravity.prioritized.chat.open")
+        -- 1. 尝试调用 Antigravity
+        -- pcall 第一个参数是函数，后续参数是传给该函数的参数
+        -- 如果成功，status 为 true；如果失败（比如命令不存在），status 为 false
+        local status_ag, _ = pcall(vscode.call, "antigravity.prioritized.chat.open")
+
+        if status_ag then
+            return -- Antigravity 成功打开，结束函数
+        end
+
+        -- 2. Antigravity 失败，尝试调用 Copilot
+        -- Copilot 的标准打开命令通常是 'workbench.panel.chat.view.copilot'
+        local status_cp, _ = pcall(vscode.call, "workbench.panel.chat")
+
+        if status_cp then
+            return -- Copilot 成功打开，结束函数
+        end
+
+        -- 3. 如果两者都失败，发送错误通知
+        vscode.notify("未找到 Antigravity 或 Copilot", "error")
     end, opt)
     -- 你可以在这里添加更多 Space 开头的映射
     -- keymap("n", "<leader>w", function() vscode.call("workbench.action.files.save") end, opts)
