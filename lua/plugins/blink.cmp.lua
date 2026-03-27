@@ -17,7 +17,7 @@ return {
         -- build = "cargo build --release",
         dependencies = {
             { "saghen/blink.compat" },
-            { "Kaiser-Yang/blink-cmp-avante" },
+            -- { "Kaiser-Yang/blink-cmp-avante" },
         },
         opts = {
             keymap = {
@@ -34,20 +34,20 @@ return {
             },
             sources = {
                 default = {
-                    "avante",
+                    -- "avante",
                     "lsp",
                     "path",
                     "snippets",
                     "buffer",
                 },
                 providers = {
-                    avante = {
-                        module = "blink-cmp-avante",
-                        name = "Avante",
-                        opts = {
-                            -- options for blink-cmp-avante
-                        },
-                    },
+                    -- avante = {
+                    --     module = "blink-cmp-avante",
+                    --     name = "Avante",
+                    --     opts = {
+                    --         -- options for blink-cmp-avante
+                    --     },
+                    -- },
                 },
             },
         },
