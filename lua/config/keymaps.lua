@@ -30,6 +30,10 @@ if vim.g.vscode then
         vscode.call("editor.action.showHover")
     end, opt)
 
+    map("n", "<C-h>", function()
+        vscode.call("workbench.action.navigateLeft")
+    end, opt)
+
     map("n", "]e", function()
         vscode.call("editor.action.marker.nextInFiles")
     end, opt)

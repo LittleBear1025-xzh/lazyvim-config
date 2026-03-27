@@ -1,5 +1,6 @@
 return {
     "cajames/copy-reference.nvim",
+    vscode = true,
     opts = {}, -- optional configuration
     keys = {
         { "<leader>gy", "<cmd>CopyReference file<cr>", mode = { "n" }, desc = "Copy file path" },
