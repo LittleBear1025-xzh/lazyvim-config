@@ -18,6 +18,7 @@ return {
         dependencies = {
             { "saghen/blink.compat" },
             -- { "Kaiser-Yang/blink-cmp-avante" },
+            { "rafamadriz/friendly-snippets" },
         },
         opts = {
             keymap = {
@@ -26,6 +27,7 @@ return {
                 ["<C-L>"] = { "snippet_forward" },
             },
             fuzzy = {
+                implementation = "prefer_rust_with_warning",
                 sorts = {
                     "exact",
                     "score",
