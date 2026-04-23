@@ -11,4 +11,5 @@ if vim.g.neovide then
     -- 输入与剪贴板
     vim.g.neovide_input_macos_option_key_is_meta = false
     vim.opt.clipboard = "unnamedplus"
+    vim.g.neovide_cursor_cell_color_fallback = true
 end
