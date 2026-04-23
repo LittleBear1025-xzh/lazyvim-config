@@ -8,4 +8,7 @@ if vim.g.neovide then
     vim.o.guifont = "Maple Mono NF CN:h13"
     vim.g.neovide_remember_window_size = true
     -- vim.g.neovide_fullscreen = true
+    -- 输入与剪贴板
+    vim.g.neovide_input_macos_option_key_is_meta = false
+    vim.opt.clipboard = "unnamedplus"
 end
