@@ -23,7 +23,7 @@ return {
                 clangd = {
                     cmd = {
                         "clangd",
-                        "--fallback-style=WebKit",
+                        "--fallback-style=Microsoft",
                     },
                 },
             },

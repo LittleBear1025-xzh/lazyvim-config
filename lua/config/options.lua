@@ -14,4 +14,5 @@ vim.o.relativenumber = false -- 不显示相对行号
 
 if vim.g.vscode then
     vim.opt.report = 9999
+    vim.o.cmdheight = 50
 end
